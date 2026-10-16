@@ -34,9 +34,10 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius
 
 .wrap{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:280px minmax(0,1fr);gap:64px;padding-block:56px 80px}
 aside{position:sticky;top:40px;align-self:start;display:flex;flex-direction:column;gap:20px}
-.photo{width:100%;max-width:240px;aspect-ratio:1/1;object-fit:cover;object-position:50% 50%;border-radius:4px;display:block}
+.id{display:grid;gap:18px;width:max-content;max-width:100%}
+.photo{width:0;min-width:100%;aspect-ratio:1/1;object-fit:cover;object-position:50% 50%;border-radius:4px;display:block}
 h1{font-family:var(--serif);font-weight:500;font-size:2.4rem;line-height:1.05;margin:0;text-wrap:balance;letter-spacing:-.01em}
-.role{color:var(--muted);margin:6px 0 0;font-size:.95rem;line-height:1.45}
+.role{color:var(--muted);margin:-14px 0 0;font-size:.95rem;line-height:1.45}
 .contact{display:flex;flex-direction:column;gap:4px;font-size:.95rem}
 .btn{display:inline-block;align-self:flex-start;background:var(--accent);color:var(--bg);text-decoration:none;
   padding:9px 16px;border-radius:3px;font-weight:600;font-size:.9rem;letter-spacing:.02em}
@@ -96,7 +97,6 @@ footer{color:var(--muted);font-size:.85rem;border-top:1px solid var(--rule);padd
 @media (max-width:820px){
   .wrap{grid-template-columns:minmax(0,1fr);gap:40px;padding-block:32px 56px}
   aside{position:static}
-  .photo{max-width:180px}
   nav ul{flex-direction:row;flex-wrap:wrap;gap:4px 16px}
   .themes,.two{grid-template-columns:minmax(0,1fr)}
 }
@@ -108,11 +108,11 @@ footer{color:var(--muted);font-size:.85rem;border-top:1px solid var(--rule);padd
 
 <div class="wrap">
   <aside>
-    <img class="photo" src="headshot.jpg" alt="Portrait of Anna De La Paz">
-    <div>
+    <div class="id">
+      <img class="photo" src="headshot.jpg" alt="Portrait of Anna De La Paz">
       <h1>Anna De La Paz</h1>
-      <p class="role">PhD Candidate in Sociology<br>Syracuse University</p>
     </div>
+    <p class="role">PhD Candidate in Sociology<br>Syracuse University</p>
     <div class="contact">
       <a href="mailto:acdelapa@syr.edu">acdelapa@syr.edu</a>
     </div>
